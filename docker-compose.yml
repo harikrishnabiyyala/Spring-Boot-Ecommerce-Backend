@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:17
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-vol:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=admin@123
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=ecommerce
+
+volumes:
+  postgres-vol:
